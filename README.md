@@ -5,10 +5,10 @@ You like crepes ? Crepes are cool.
 ---
 
 This project is made to host ft_crepes' musics,
-you will be able to listen to them online once the website is finished.
+you can to listen to them [here](https://ft-crepes.pening.fr).
 
 Its an upgrade of the [old website](https://github.com/MariusROBERT/ft_crepes) which was made in vanilla JS
-in less than an hour, this one is made with React and [Mantine](http://mantine.dev).
+in less than an hour, this one is made with React and [Mantine](http://mantine.dev) and host by [Vercel](http://vercel.com).
 
 Feel free to explore the code and improve it.
 Keep in mind that it's not meant to be an extraordinary website with a lot of content and animations everywhere
