@@ -17,8 +17,7 @@ export function MusicButton(props: music) {
   function changeMusic(name: string, mp3: string) {
     return () => {
       props.onMusicTitle(name);
-      props.onMusicURL(mp3);
-      document.querySelector("audio")?.load();
+      props.onMusicURL(process.env.PUBLIC_URL + mp3);
     }
   }
 
