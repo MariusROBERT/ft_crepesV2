@@ -1,6 +1,7 @@
 import React from 'react';
 import bg from "./images/bg_empty.png";
-import {Anchor, BackgroundImage, Center, Container, Flex, MantineProvider, Text} from "@mantine/core";
+import text from "./images/text.png"
+import {Anchor, BackgroundImage, Center, Container, Flex, Image, MantineProvider, Text} from "@mantine/core";
 import {useMediaQuery} from "@mantine/hooks";
 import {MusicButton} from "./components/MusicButton";
 
@@ -14,7 +15,6 @@ function App() {
   const [musicURL, setMusicURL] = React.useState("");
 
   const isLargeScreen = useMediaQuery('(min-width: 35em)');
-  const isReallyLargeScreen = useMediaQuery('(min-width: 55em)');
 
   const musicList: Music[] = [
     {name: "Git you up", mp3: "musics/Git_you_up.mp3"},
@@ -28,23 +28,6 @@ function App() {
       <MantineProvider withNormalizeCSS withGlobalStyles
                        theme={{
                          components: {
-                           Text: {
-                             sizes: {
-                               xxl: (theme) => ({
-                                 root: {
-                                   fontSize: isLargeScreen ? "1.5rem" : theme.fontSizes.lg
-                                 }
-                               }),
-                               xxxl: () => ({
-                                 root: {
-                                   fontSize: isLargeScreen ? (isReallyLargeScreen ? "10rem" : "6rem") : "3rem",
-                                   color: "white",
-                                   fontWeight: "bold",
-                                   fontStyle: "italic"
-                                 }
-                               })
-                             }
-                           },
                            Button: {
                              sizes: {
                                xxl: (theme) => ({
@@ -65,7 +48,7 @@ function App() {
                   direction={"column"} align={"center"} justify={"space-evenly"}
             >
               <Center>
-                <Text size={"xxxl"}>FT_CRÊPES</Text>
+                <Image src={text}/>
               </Center>
 
               <Flex direction={isLargeScreen ? "row" : "column"}
@@ -81,11 +64,13 @@ function App() {
                 ))}
               </Flex>
 
-              <Flex direction={"column"} align={"center"} bg={"#99999999"} p={"md"} style={{borderRadius: "15px"}}>
-                <Text size={"xxl"} color={"white"}>Now playing: {nowPlaying}</Text>
+              <Flex direction={"column"} align={"center"} bg={"#8A8A8A99"} p={"md"}
+                    style={{borderRadius: "15px", visibility: (!musicURL) ? "hidden" : "visible"}}
+              >
+                <Text fz={isLargeScreen ? "1.5rem" : "lg"} color={"white"}>Now playing: {nowPlaying}</Text>
                 <br/>
                 <Flex align={"center"}>
-                  <audio controls src={musicURL}>
+                  <audio controls src={musicURL} autoPlay>
                     <Text fz={"md"}>Your browser does not support the audio element.</Text>
                   </audio>
                   <Container p={"sm"}>
