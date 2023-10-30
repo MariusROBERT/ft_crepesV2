@@ -1,12 +1,11 @@
 import {Button} from "@mantine/core";
 import {useMediaQuery} from "@mantine/hooks";
+import {Music} from "../App";
 
 
 interface music {
-  name: string;
-  mp3: string;
-  onMusicTitle: (str: string) => void;
-  onMusicURL: (str: string) => void;
+  music: Music;
+  onSelectedMusic: (music: Music) => void;
 }
 
 
@@ -14,22 +13,21 @@ export function MusicButton(props: music) {
 
   const isLargeScreen = useMediaQuery('(min-width: 35em)');
 
-  function changeMusic(name: string, mp3: string) {
+  function changeMusic(music: Music) {
     return () => {
-      props.onMusicTitle(name);
-      props.onMusicURL(process.env.PUBLIC_URL + mp3);
+      props.onSelectedMusic(props.music);
     }
   }
 
   return (
-      <Button onClick={changeMusic(props.name, props.mp3)}
+      <Button onClick={changeMusic(props.music)}
               size={isLargeScreen ? "xxl" : "lg"}
               radius={"md"}
               m={isLargeScreen ? "lg" : "md"}
               variant={"light"}
               color={"grape"}
       >
-        {props.name}
+        {props.music.name}
       </Button>
   )
 }
