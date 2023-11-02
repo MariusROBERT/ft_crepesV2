@@ -6,7 +6,7 @@ export const Git_you_up_lyrics = `
 
 [10.4] J'arrive pas à coder putain mon gars là je crois c'est chaud
 [12.3] Au moins j'ai réussi à me log j'espère que j'ai pas 0
-[15.2] J'suis venu tôt ce matin tout ça pour que ça segfault
+[15.2] J'suis venu depuis tôt ce matin tout ça pour que ça segfault
 [17.5] J'ai autant de projet à 0 que mon code a des défauts
 
 [19.5] 15h de logtime dans le cul frère j'veux rentrer chez moi
