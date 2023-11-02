@@ -1,7 +1,17 @@
-import React from 'react';
+import React, {useRef, useState} from 'react';
 import bg from "./images/bg_empty.png";
 import text from "./images/text.png"
-import {Anchor, BackgroundImage, Center, Container, Flex, Image, MantineProvider, Text} from "@mantine/core";
+import {
+  Anchor,
+  BackgroundImage,
+  Center,
+  Container,
+  Flex,
+  Image,
+  MantineProvider,
+  ScrollArea,
+  Text
+} from "@mantine/core";
 import {useMediaQuery} from "@mantine/hooks";
 import {MusicButton} from "./components/MusicButton";
 import {
@@ -19,8 +29,9 @@ export interface Music {
 }
 
 function App() {
-  const [currentLyrics, setCurrentLyrics] = React.useState("");
+  const [currentLine, setCurrentLine] = useState(0);
   const [currentMusic, setCurrentMusic] = React.useState<Music | null>(null);
+  const viewportScroll = useRef<HTMLDivElement>(null);
 
   const isLargeScreen = useMediaQuery('(min-width: 35em)');
 
@@ -32,21 +43,22 @@ function App() {
     {name: "Tout niquer", mp3: "musics/Tout_niquer.mp3", lyrics: Tout_niquer_lyrics}
   ]
 
-  function getTimedLyrics(fullLyrics: string | undefined, currentTime: number): string {
+  function getTimedLyrics(fullLyrics: string | undefined, currentTime: number) {
     if (!fullLyrics)
-      return "";
-    console.log(currentTime);
-    let currentLyrics = '';
-    for (let line of fullLyrics.split("\n")) {
-      if (/^\[(\d+(\.\d+)?)](.*)/.test(line)) {
-        const [, time, , lyrics] = line.match(/^\[(\d+(\.\d+)?)](.*)/) || [];
+      return;
+    let currentLine = 0;
+    // Replace next line with for loop with index and value
+    const lines = fullLyrics.split("\n");
+    for (const lineNumber in lines) {
+      if (/^\[(\d+(\.\d+)?)](.*)/.test(lines[lineNumber])) {
+        const [, time] = lines[lineNumber].match(/^\[(\d+(\.\d+)?)](.*)/) || [];
         if (parseFloat(time) < currentTime) {
-          currentLyrics = lyrics;
+          currentLine = parseInt(lineNumber);
         } else
           break;
       }
     }
-    return currentLyrics;
+    setCurrentLine(currentLine);
   }
 
 
@@ -98,8 +110,7 @@ function App() {
                   <audio controls src={process.env.PUBLIC_URL + currentMusic?.mp3}
                          autoPlay
                          onTimeUpdate={
-                           (e) => setCurrentLyrics(getTimedLyrics(currentMusic?.lyrics, (e.target as HTMLAudioElement).currentTime))
-                         }>
+                           (e) => getTimedLyrics(currentMusic?.lyrics, (e.target as HTMLAudioElement).currentTime)}>
                     <Text fz={"md"}>Your browser does not support the audio element.</Text>
                   </audio>
                   <Container p={"sm"}>
@@ -112,7 +123,13 @@ function App() {
                     </Anchor>
                   </Container>
                 </Flex>
-                <Text color={'white'}>{currentLyrics}</Text>
+                <ScrollArea h={'4.5em'} viewportRef={viewportScroll} maw={450}>
+                  {
+                    currentMusic?.lyrics?.split("\n").map((line, index) => (
+                        <Text color={'white'} weight={index === currentLine ? 700: 300} key={index}>{line.replace(/^\[(\d+(\.\d+)?)]/, '')}</Text>
+                    ))
+                  }
+                </ScrollArea>
               </Flex>
 
             </Flex>
