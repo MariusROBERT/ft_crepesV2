@@ -197,11 +197,11 @@ export const Elle_code_bien_sa_mere_lyrics = `
 
 [73.8] Elle code bien sa mère sur la vie de ma mère pour elle C10 c'est pas assez
 [78.3] Elle code bien sa mère sur la vie de ma mère pour elle C12 c'est pas assez
-[82.8] Ohhh, c'est la queen en C, son projet est tellement clean j'ai cru que c'était de l'anglais ----
+[82.8] Ohhh, c'est la queen en C, son projet est tellement clean j'ai cru que c'était de l'anglais
 [87.7] Ohhh, c'est la queen en C, son projet est tellement clean j'ai cru que c'était de l'anglais
 
 
-[90.5] Elle code bien sa mère, bien sa mère ---
+[90.5] Elle code bien sa mère, bien sa mère
 [99.6] Elle code bien sa mère, bien sa mère
 
 
