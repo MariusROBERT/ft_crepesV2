@@ -15,6 +15,7 @@ import {
 import {useMediaQuery} from "@mantine/hooks";
 import {MusicButton} from "./components/MusicButton";
 import {
+  Beurre_perime,
   CA42_lyrics,
   Elle_code_bien_sa_mere_lyrics,
   ft_crepesstyle_lyrics,
@@ -40,10 +41,12 @@ function App() {
     {name: "CA42", mp3: "musics/CA42.mp3", lyrics: CA42_lyrics},
     {name: "Elle code bien sa mère", mp3: "musics/Elle_code_bien_sa_mere.mp3", lyrics: Elle_code_bien_sa_mere_lyrics},
     {name: "ft_crepestyle", mp3: "musics/ft_crepestyle.mp3", lyrics: ft_crepesstyle_lyrics},
-    {name: "Tout niquer", mp3: "musics/Tout_niquer.mp3", lyrics: Tout_niquer_lyrics}
+    {name: "Tout niquer", mp3: "musics/Tout_niquer.mp3", lyrics: Tout_niquer_lyrics},
+    {name: "Beurre Périmé", mp3: "musics/Beurre_perime.mp3", lyrics: Beurre_perime}
   ]
 
   function getTimedLyrics(fullLyrics: string | undefined, currentTime: number) {
+    console.log(currentTime);
     if (!fullLyrics)
       return;
     let currentLine = 0;

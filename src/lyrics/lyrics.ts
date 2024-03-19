@@ -375,3 +375,89 @@ export const Tout_niquer_lyrics = `
 [133.4] C'était Bertrand Goudard, à vous les studios
 `
 
+export const Beurre_perime = `
+[5.3] Salut les crêpes y'aura plus t'es tout seul
+[8.1] Et on a fait du bénef sur ta gueule
+[10.3] Nananana on t'a niqué
+[12.6] Les crêpes sont au beurre périmé
+
+[15.5] Salut les crêpes y'aura plus t'es tout seul
+[18.5] Et on a fait du bénef sur ta gueule
+[21] Nananana on t'a niqué
+[23.1] Les crêpes sont au beurre périmé
+
+[26.40] En vrai ça nous prend du temps parce que la farine on la coupe au plâtre
+[31] On fait genre qu'on s'y connait
+[32.4] On fait genre qu'on est calé
+[33.8] Mais on sait pas faire des œufs au plat
+
+[36.75] Tu te disais "oh les pauvres,
+[38.85] Je vais les aider ils le méritent bien"
+[41.17] Mais on chill, on est pété d'thunes
+[44.15] On part à Ibiza après-demain
+
+[46.9] Les œufs, ils ont pas le label bio
+[49.5] Le lait, on le met pas au frigo
+[52.18] Le beurre, d'où il sort, on sait pas trop
+[55] Et le nutella on le coupe à l'eau
+
+[58.1] Salut les crêpes y'aura plus t'es tout seul
+[60.5] Et on a fait du bénef sur ta gueule
+[63.4] Nananana on t'a niqué
+[65.6] Les crêpes sont au beurre périmé
+
+[68.70] Salut les crêpes y'aura plus t'es tout seul
+[71.5] Et on a fait du bénef sur ta gueule
+[74.05] Nananana on t'a niqué
+[76.17] Les crêpes sont au beurre périmé
+
+[79.3] Je tiens vraiment à te remercier
+[81.35] Pour tout ces dons généreux
+[84.05] J'ai payé mes vacances, j'ai payé mon loyer
+[86.77] Je me suis même acheté l'iMac 2
+
+[89.6] Si l'bocal faisait pas la queue
+[91.75] C'est parce que des tips ils en donnent plus
+[94.08] Nos crêpes sont pas chères pleines de parasites
+[97] On dirait que c'est un marché aux puces
+
+[99.75] Les œufs, ils ont pas le label bio
+[102.35] Le lait, on le met pas au frigo
+[105] Le beurre, d'où il sort, on sait pas trop
+[107.7] Et le nutella on le coupe à l'eau
+
+[110.9] Salut les crêpes y'aura plus t'es tout seul
+[113.55] Et on a fait du bénef sur ta gueule
+[116.3] Nananana on t'a niqué
+[118.32] Les crêpes sont au beurre périmé
+
+[121.58] Salut les crêpes y'aura plus t'es tout seul
+[124.2] Et on a fait du bénef sur ta gueule
+[126.86] Nananana on t'a niqué
+[128.87] Les crêpes sont au beurre périmé
+
+[131.8] Ça coûte vraiment que 8 euros
+[134.24] De faire 200 crêpes bande de blaireaux
+[136.8] Tu veux qu'on t'rende tes sous pélo ?
+[139.58] Dommage tout est parti dans l'resto
+
+[142.26] Ça coûte vraiment que 8 euros
+[144.83] De faire 200 crêpes bande de blaireaux
+[147.38] Tu veux qu'on t'rende tes sous pélo ?
+[150] Aucune chance mon pti jambonneau hey
+
+[152.8] Nanana nananana nananananana
+[157.15] On a pris ta moula
+[158.17] Nanana nananana nananananana
+[162.45] On a pris ta moula
+
+[163.85] Salut les crêpes y'aura plus t'es tout seul
+[166.35] Et on a fait du bénef sur ta gueule
+[168.8] Nananana on t'a niqué
+[171] Les crêpes sont au beurre périmé
+
+[174.1] Salut les crêpes y'aura plus t'es tout seul
+[176.9] Et on a fait du bénef sur ta gueule
+[179.5] Nananana on t'a niqué
+[181.6] Les crêpes sont au beurre périmé
+`
